@@ -1,1 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flagship Bookkeeping, Inc. | QuickBooks Consulting & Training</title>
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            navy: {
+              950: '#07182b',
+              900: '#0c2340',
+              800: '#0f335b',
+              700: '#17477c',
+              600: '#235e9f',
+              100: '#e5effa',
+              50: '#f0f6fc',
+            },
+            accent: {
+              500: '#d97706',
+              600: '#b45309',
+            }
+          }
+        }
+      }
+    }
+  </script>
 
+  <style>
+    /* Smooth hero background treatment and subtle elevation */
+    .desk-hero-banner {
+      background-image: linear-gradient(180deg, rgba(12, 35, 64, 0.45) 0%, rgba(12, 35, 64, 0.78) 100%),
+                        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center 38%;
+    }
+    
+    .card-hover-effect {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .card-hover-effect:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 25px -5px rgba(12, 35, 64, 0.08), 0 10px 10px -5px rgba(12, 35, 64, 0.04);
+    }
+  </style>
+</head>
+<body class="bg-[#fafbfc] text-slate-800 font-sans antialiased selection:bg-navy-700 selection:text-white flex flex-col min-h-screen">
+
+  <!-- ================= TOP BRAND BANNER ================= -->
+  <header class="bg-navy-900 border-b border-navy-800 text-white sticky top-0 z-40 backdrop-blur-md bg-opacity-95 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo / Title -->
+        <div class="flex flex-col">
+          <a href="#" class="font-display font-extrabold text-xl sm:text-2xl tracking-tight text-white flex items-center gap-2">
+            <!-- Maritime / Compass / Anchor icon SVG -->
+            <svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20m0-20l4 4m-4-4l-4 4M4 14a8 8 0 0016 0"></path>
+            </svg>
+            <span>Flagship Bookkeeping<span class="text-sky-400">, Inc.</span></span>
+          </a>
+          <span class="text-xs sm:text-sm font-medium tracking-wide text-sky-200/90 italic">
+            Specializing in QuickBooks Consulting &amp; Training
+          </span>
+        </div>
+
+        <!-- Right Action Button -->
+        <div class="flex items-center gap-3">
+          <a href="#inquiry" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold rounded-lg bg-white text-navy-900 hover:bg-sky-50 transition shadow-sm hover:shadow">
+            Request Consultation
+          </a>
+          <a href="#inquiry" class="sm:hidden p-2 rounded-lg bg-navy-800 text-white hover:bg-navy-700">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="flex-grow">
+    <!-- ================= HERO SECTION ================= -->
+    <section class="desk-hero-banner relative text-white py-24 sm:py-32 flex items-center shadow-inner">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        
+        <!-- Small pill badge -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-950/60 border border-white/15 backdrop-blur-sm text-xs font-semibold text-sky-200 uppercase tracking-widest mb-6">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          QuickBooks Certified Professional
+        </div>
+
+        <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight drop-shadow-sm">
+          Clarity In Your Numbers.<br class="hidden sm:inline" />
+          <span class="text-sky-300">Confidence In Your Growth.</span>
+        </h1>
+
+        <p class="max-w-2xl mx-auto text-base sm:text-lg text-slate-200 leading-relaxed font-normal mb-9">
+          Tailored QuickBooks consulting, structured one-on-one training, and meticulous bookkeeping designed to eliminate financial stress and keep your business on course.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="#inquiry" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-navy-700 hover:bg-navy-600 text-white font-semibold text-base transition-all duration-200 shadow-lg hover:shadow-xl border border-sky-400/30 flex items-center justify-center gap-2">
+            <span>Get Started</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </a>
+          <a href="#services" class="w-full sm:w-auto px-8 py-3.5 rounded-lg bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-medium text-base transition duration-200 border border-white/25">
+            Explore Services
+          </a>
+        </div>
+      </div>
+      
+      <!-- Subtle bottom gradient divider -->
+      <div class="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-[#fafbfc] to-transparent"></div>
+    </section>
+
+    <!-- ================= VALUE PROPOSITION BAR ================= -->
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-6 relative z-20">
+      <div class="bg-white rounded-xl shadow-md border border-slate-200/80 p-6 sm:p-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left divide-y md:divide-y-0 md:divide-x divide-slate-100">
+        <div class="px-3 pt-3 md:pt-0">
+          <div class="text-navy-800 font-display font-bold text-lg mb-1 flex items-center justify-center md:justify-start gap-2">
+            <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            QuickBooks Specialist
+          </div>
+          <p class="text-sm text-slate-500 leading-normal">Online and Desktop editions configured specifically around your operational workflow.</p>
+        </div>
+        <div class="px-3 pt-4 md:pt-0">
+          <div class="text-navy-800 font-display font-bold text-lg mb-1 flex items-center justify-center md:justify-start gap-2">
+            <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+            Personalized Coaching
+          </div>
+          <p class="text-sm text-slate-500 leading-normal">Clear, patient, practical staff guidance so your team feels totally confident every day.</p>
+        </div>
+        <div class="px-3 pt-4 md:pt-0">
+          <div class="text-navy-800 font-display font-bold text-lg mb-1 flex items-center justify-center md:justify-start gap-2">
+            <svg class="w-5 h-5 text-sky-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+            Tax-Ready Accuracy
+          </div>
+          <p class="text-sm text-slate-500 leading-normal">Clean ledgers and reconciled statements ready for your CPA without year-end scrambling.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES SECTION ================= -->
+    <section id="services" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-wider text-sky-700 mb-2">Our Capabilities</h2>
+        <p class="text-3xl font-display font-extrabold text-navy-950 tracking-tight">Structured Solutions For Your Ledger</p>
+        <p class="text-slate-600 mt-3 text-base">From hands-on software guidance to regular month-end closures, we ensure complete accuracy.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl p-6 border border-slate-200/90 shadow-sm card-hover-effect flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-navy-50 text-navy-800 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">QuickBooks Setup &amp; Migration</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Custom Chart of Accounts design, third-party software integrations, and seamless data transitions with zero lost history.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-sky-700">
+            <span>Tailored Chart Setup</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl p-6 border border-slate-200/90 shadow-sm card-hover-effect flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-navy-50 text-navy-800 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">1-on-1 Consulting &amp; Training</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Empower yourself and your staff with targeted training sessions covering daily invoicing, bills, inventory, and ledger accuracy.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-sky-700">
+            <span>Tailored Staff Sessions</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl p-6 border border-slate-200/90 shadow-sm card-hover-effect flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-navy-50 text-navy-800 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">Monthly Bookkeeping &amp; Reconciliations</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Routine bank and credit card reconciliations, monthly Balance Sheets, and accurate Profit &amp; Loss statements delivered on schedule.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-sky-700">
+            <span>Timely Financial Reports</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-xl p-6 border border-slate-200/90 shadow-sm card-hover-effect flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-lg bg-navy-50 text-navy-800 flex items-center justify-center mb-5">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path></svg>
+            </div>
+            <h3 class="font-display font-bold text-lg text-navy-900 mb-2">Diagnostic Reviews &amp; Catch-Up</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Behind on your accounting? We unknot cluttered records, repair broken balances, and bring historical transactions up to date.
+            </p>
+          </div>
+          <div class="mt-5 pt-4 border-t border-slate-100 flex items-center text-xs font-semibold text-sky-700">
+            <span>Historical Ledger Cleanup</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================= WHY WORK WITH US ================= -->
+    <section class="bg-white border-y border-slate-200/70 py-16">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-5">
+            <span class="text-xs font-bold uppercase tracking-wider text-sky-700">The Flagship Advantage</span>
+            <h2 class="text-3xl font-display font-extrabold text-navy-950 mt-2 mb-4 leading-tight">
+              A Steady Hand For Your Financial Navigation
+            </h2>
+            <p class="text-slate-600 mb-6 text-sm sm:text-base leading-relaxed">
+              Managing books shouldn't take you away from serving your clients. We build practical bookkeeping systems that run like clockwork, giving you back hours of your week.
+            </p>
+
+            <ul class="space-y-4">
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-5 h-5 rounded-full bg-navy-100 text-navy-800 flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</div>
+                <p class="text-sm text-slate-700 font-medium"><strong class="text-navy-900">Customized to Your Business:</strong> No rigid templates. We adapt QuickBooks to your specific industry workflow.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-5 h-5 rounded-full bg-navy-100 text-navy-800 flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</div>
+                <p class="text-sm text-slate-700 font-medium"><strong class="text-navy-900">Plain-English Explanations:</strong> Clear summaries of where your revenue stands without confusing jargon.</p>
+              </li>
+              <li class="flex items-start gap-3">
+                <div class="mt-1 w-5 h-5 rounded-full bg-navy-100 text-navy-800 flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</div>
+                <p class="text-sm text-slate-700 font-medium"><strong class="text-navy-900">Tax Season Confidence:</strong> Organized records ready to hand directly to your CPA.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Process Timeline / Steps -->
+          <div class="lg:col-span-7 bg-slate-50 p-8 rounded-2xl border border-slate-200">
+            <h3 class="text-xl font-display font-bold text-navy-900 mb-6">How We Work Together</h3>
+            
+            <div class="space-y-6">
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy-800 text-white font-bold flex items-center justify-center text-sm shadow">1</div>
+                <div>
+                  <h4 class="font-bold text-navy-900 text-base">Discovery &amp; System Review</h4>
+                  <p class="text-sm text-slate-600 mt-1">We assess your current bookkeeping files, software version, and immediate pain points.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy-800 text-white font-bold flex items-center justify-center text-sm shadow">2</div>
+                <div>
+                  <h4 class="font-bold text-navy-900 text-base">Structure &amp; Implementation</h4>
+                  <p class="text-sm text-slate-600 mt-1">We adjust your chart of accounts, clean backlogged transactions, and optimize bank feeds.</p>
+                </div>
+              </div>
+
+              <div class="flex gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-full bg-navy-800 text-white font-bold flex items-center justify-center text-sm shadow">3</div>
+                <div>
+                  <h4 class="font-bold text-navy-900 text-base">Ongoing Precision &amp; Support</h4>
+                  <p class="text-sm text-slate-600 mt-1">Receive regular reconciliations and dedicated training so you are never left guessing.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= INQUIRY / CONSULTATION SECTION ================= -->
+    <section id="inquiry" class="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+        
+        <!-- Header Banner -->
+        <div class="bg-navy-900 px-6 sm:px-10 py-8 text-white text-center">
+          <span class="text-xs uppercase tracking-widest text-sky-400 font-bold">Get In Touch</span>
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold mt-1">Request a Consultation</h2>
+          <p class="text-slate-300 text-sm mt-2 max-w-lg mx-auto">
+            Tell us about your business and your bookkeeping or QuickBooks training goals. We will reach back out promptly.
+          </p>
+        </div>
+
+        <!-- Form Area -->
+        <form id="consultationForm" class="p-6 sm:p-10 space-y-6" onsubmit="handleFormSubmit(event)">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            
+            <div>
+              <label for="fullName" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">
+                Full Name <span class="text-rose-500">*</span>
+              </label>
+              <input type="text" id="fullName" required placeholder="Jane Doe"
+                     class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-navy-700 focus:border-transparent transition">
+            </div>
+
+            <div>
+              <label for="businessName" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">
+                Business / Company Name
+              </label>
+              <input type="text" id="businessName" placeholder="Acme Services LLC"
+                     class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-navy-700 focus:border-transparent transition">
+            </div>
+
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div>
+              <label for="email" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">
+                Email Address <span class="text-rose-500">*</span>
+              </label>
+              <input type="email" id="email" required placeholder="jane@example.com"
+                     class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-navy-700 focus:border-transparent transition">
+            </div>
+
+            <div>
+              <label for="serviceInterest" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">
+                Primary Area of Interest <span class="text-rose-500">*</span>
+              </label>
+              <select id="serviceInterest" required
+                      class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-navy-700 focus:border-transparent transition bg-white">
+                <option value="" disabled selected>Select a service...</option>
+                <option value="QuickBooks Training">QuickBooks Training &amp; Coaching</option>
+                <option value="QuickBooks Setup">QuickBooks Setup &amp; Configuration</option>
+                <option value="Monthly Bookkeeping">Ongoing Monthly Bookkeeping</option>
+                <option value="Diagnostic & Cleanup">Historical Books Cleanup / Review</option>
+                <option value="General Consultation">General Financial Consultation</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label for="message" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">
+              How Can We Help? <span class="text-rose-500">*</span>
+            </label>
+            <textarea id="message" rows="4" required placeholder="Briefly describe your current bookkeeping setup or training goals..."
+                      class="w-full px-4 py-2.5 rounded-lg border border-slate-300 text-slate-900 text-sm focus:outline-none focus:ring-2 focus:ring-navy-700 focus:border-transparent transition resize-y"></textarea>
+          </div>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p class="text-xs text-slate-500 order-2 sm:order-1 text-center sm:text-left">
+              🔒 Information is kept strictly private and confidential.
+            </p>
+            <button type="submit" id="submitBtn"
+                    class="w-full sm:w-auto px-8 py-3 rounded-lg bg-navy-800 hover:bg-navy-900 text-white font-semibold text-sm transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2 order-1 sm:order-2">
+              <span>Send Inquiry</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= INLINE CONFIRMATION MODAL ================= -->
+  <div id="successModal" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm hidden p-4">
+    <div class="bg-white rounded-2xl max-w-md w-full p-6 text-center shadow-2xl border border-slate-200 transform transition-all">
+      <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+        </svg>
+      </div>
+      <h3 class="text-xl font-display font-bold text-navy-950 mb-2">Inquiry Received</h3>
+      <p class="text-sm text-slate-600 mb-6">
+        Thank you for reaching out to Flagship Bookkeeping, Inc. We have received your details and will review your request shortly.
+      </p>
+      <button type="button" onclick="closeModal()" class="w-full py-2.5 px-4 rounded-lg bg-navy-900 text-white font-medium text-sm hover:bg-navy-800 transition">
+        Done
+      </button>
+    </div>
+  </div>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="bg-navy-950 text-slate-400 border-t border-navy-900 py-10 mt-auto">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div>
+          <div class="text-white font-display font-bold text-base tracking-wide flex items-center justify-center md:justify-start gap-2">
+            <svg class="w-5 h-5 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 2v20m0-20l4 4m-4-4l-4 4M4 14a8 8 0 0016 0"></path>
+            </svg>
+            Flagship Bookkeeping, Inc.
+          </div>
+          <p class="text-xs text-slate-400 mt-1">Specializing in QuickBooks Consulting &amp; Training</p>
+        </div>
+
+        <div class="text-xs text-slate-400">
+          &copy; <span id="currentYear"></span> Flagship Bookkeeping, Inc. All rights reserved.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ================= CLIENT LOGIC ================= -->
+  <script>
+    // Set dynamic current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Form submission simulation
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const submitBtn = document.getElementById('submitBtn');
+      const originalBtnText = submitBtn.innerHTML;
+      
+      // Temporary loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <svg class="animate-spin -ml-1 mr-2 h-4 w-4 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <span>Sending...</span>
+      `;
+
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnText;
+        document.getElementById('consultationForm').reset();
+        document.getElementById('successModal').classList.remove('hidden');
+      }, 700);
+    }
+
+    function closeModal() {
+      document.getElementById('successModal').classList.add('hidden');
+    }
+
+    // Close modal on click outside
+    window.addEventListener('click', function(event) {
+      const modal = document.getElementById('successModal');
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+  </script>
+</body>
+</html>
